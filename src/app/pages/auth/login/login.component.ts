@@ -31,7 +31,7 @@ export class LoginComponent {
   // "email": "dada@asd.ada"
 
   public loginToApp() {
-    
+
 
     this.http.post<any>('http://127.0.0.1:8000/api/v1/user/login',
       { email: 'dada@asd.ada', password: 'asdada' },
