@@ -37,7 +37,7 @@ export class LoginComponent {
       { email: 'dada@asd.ada', password: 'asdada' },
       ).subscribe(data => {
       // alert(data);
-      console.log(data);
+      // console.log(data);
 
     });
   }
