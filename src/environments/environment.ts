@@ -6,7 +6,7 @@ const environmentOverrides = {
         app: 'http://localhost:4200/',
         cookieDomain: null,
         files: 'https://restro.s3-us-west-2.amazonaws.com',
-    })
+    }),
 } as Environment;
 
 /**
@@ -20,5 +20,5 @@ const environmentOverrides = {
 export const environment: Environment = Object.assign<{}, Environment, Environment>(
     {},
     baseEnvironment,
-    environmentOverrides
+    environmentOverrides,
 );

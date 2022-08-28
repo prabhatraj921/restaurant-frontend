@@ -17,7 +17,7 @@ export class UserService {
 
     userLogin (data): Observable<any> {
         return this.httpClient.postPreLogin('user/login', data).pipe(
-            map(this.extractResponse)
+            map(this.extractResponse),
         );
     }
 
