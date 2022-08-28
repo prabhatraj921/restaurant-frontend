@@ -20,6 +20,9 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import {HttpClientHelper} from './pages/app.httpclient';
+import {AuthenticationService} from './gaurd/authentication.service';
+import {UserService} from './services/userService';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,12 +38,13 @@ import {
     NbWindowModule.forRoot(),
     NbToastrModule.forRoot(),
     NbChatModule.forRoot({
-      messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
+      messageGoogleMapKey: '',
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
   ],
   bootstrap: [AppComponent],
+  providers: [HttpClientHelper, AuthenticationService, UserService],
 })
 export class AppModule {
 }

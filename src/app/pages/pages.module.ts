@@ -21,5 +21,5 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
     PagesComponent,
   ],
 })
-export class PagesModule {
+export class  PagesModule {
 }

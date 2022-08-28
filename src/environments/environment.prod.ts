@@ -1,22 +1,24 @@
+import {Environment} from './type';
+
 /**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
+ * This is created separately from @see environment to allow additional properties
+ * that @see Environment does not have.
  */
-export const environment = {
-  production: true,
-  urls: {
-    access: 'https://access.planhub.com/',
-    api: 'https://api.planhub.com',
-    app: 'https://app.planhub.com/',
-    cookieDomain: '.planhub.com',
-    files: 'https://pod1-planhubdev.s3-us-west-2.amazonaws.com',
-    hubspotTrial: 'https://meetings.hubspot.com/jay-woolley/subcontractor-demo-from-website',
-    socketAddress: 'https://api.pod1.planhub.com:8890/',
-    subcontractor: 'https://subcontractor.pod1.planhub.com/',
-    supplier: 'https://supplier.pod1.planhub.com/',
-    generalcontractor: 'https://generalcontractor.pod1.planhub.com/',
-    zipDocs: 'https://api.pod1.planhub.com/',
-    chargeBee: 'planhub-test',
-  },
+const env = {
+    urls: {
+        api: 'http://localhost:8000',
+        app: 'https://app.restro.com/',
+        cookieDomain: 'restro.com',
+        files: 'https://restro.s3-us-west-2.amazonaws.com',
+    }
 };
+
+/**
+ * Values specific to this environment.
+ *
+ * To override these values, duplicate this file into a new one called `environment.custom.ts`.
+ *
+ * The `/config/setup-environment.js` script will overwrite this file on build or serve so you can
+ * always pull down the latest and take their environment file if there were changes.
+ */
+export const environment: Environment = env;
