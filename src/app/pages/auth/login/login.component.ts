@@ -4,8 +4,8 @@ import { ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import * as ɵngcc0 from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {AuthenticationService} from "../../../gaurd/authentication.service";
-import {UserService} from "../../../services/userService";
+import {AuthenticationService} from '../../../gaurd/authentication.service';
+import {UserService} from '../../../services/userService';
 
 
 @Component({
@@ -36,13 +36,13 @@ export class LoginComponent {
   // "email": "dada@asd.ada"
 
   public loginToApp() {
-   let userData = {
-      email: "dada@asd.ada",
-      password: "asdada",
+   const userData = {
+      email: 'dada@asd.ada',
+      password: 'asdada',
     };
     this.userService.userLogin(userData).subscribe(
         data => this.loginSuccess(data, userData),
-        error =>  this.loginFail(error)
+        error =>  this.loginFail(error),
     );
 
 
@@ -53,8 +53,9 @@ export class LoginComponent {
     loginFail(error){
 
     }
-    loginSuccess(result, userData){
-        if(result.status === 0){
+
+    loginSuccess(result, userData) {
+        if (result.status === 0) {
             this.authenticationService.setLogin(result);
             this.router.navigate(['/pages/dashboard']);
         }

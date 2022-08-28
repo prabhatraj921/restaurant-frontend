@@ -27,7 +27,7 @@ export class HttpClientHelper {
     }
 
     createAuthorizationHeader() {
-        let headers = new HttpHeaders({
+        const headers = new HttpHeaders({
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
             'Accept': 'application/json',
